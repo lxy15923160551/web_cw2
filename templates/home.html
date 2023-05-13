@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+        span {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    div {
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  {% extends 'base.html' %}
+    {% block content %}
+  <div><h2><a href="{% url 'findflight_submit' %}">Find Flight</a></h2></div>
+  <div><h2><a href="{% url 'getorder_submit' %}">Get Order</a></h2></div>
+  <div><h2><a href="{% url 'check_submit' %}">CHECK</a></h2></div>
+  <div><h2><a href="{% url 'book_submit' %}">BOOK FLIGHT</a></h2></div>
+  <div><h2><a href="{% url 'paymentmethod_submit' %}">Payment Method</a></h2></div>
+  <div><h2><a href="{% url 'cancelbooking_submit' %}">Cancel Booking</a></h2></div>
+  <h2>Payment WS</h2>
+  <span><div><h2><a href="{% url 'login_deposit' %}">PAYMENT-DEPOSIT</a></h2></div></span>
+  <span><div><h2><a href="{% url 'login_balance' %}">PAYMENT-BALANCE</a></h2></div></span>
+  <span><div><h2><a href="{% url 'login_statement' %}">PAYMENT-STATEMENT</a></h2></div></span>
+  <span><div><h2><a href="{% url 'submit_transfer' %}">PAYMENT-TRANSFER</a></h2></div></span>
+  <h2>Payment weha</h2>
+  <span><div><h2><a href="{% url 'login_deposit2' %}">PAYMENT-DEPOSIT</a></h2></div></span>
+  <span><div><h2><a href="{% url 'login_balance2' %}">PAYMENT-BALANCE</a></h2></div></span>
+  <span><div><h2><a href="{% url 'login_statement2' %}">PAYMENT-STATEMENT</a></h2></div></span>
+  <span><div><h2><a href="{% url 'submit_transfer2' %}">PAYMENT-TRANSFER</a></h2></div></span>
+  <h2>Payment nnr</h2>
+    <span><div><h2><a href="{% url 'login_deposit3' %}">PAYMENT-DEPOSIT</a></h2></div></span>
+  <span><div><h2><a href="{% url 'login_balance3' %}">PAYMENT-BALANCE</a></h2></div></span>
+  <span><div><h2><a href="{% url 'login_statement3' %}">PAYMENT-STATEMENT</a></h2></div></span>
+  <span><div><h2><a href="{% url 'submit_transfer3' %}">PAYMENT-TRANSFER</a></h2></div></span>
+    {% endblock %}
+</body>
+</html>

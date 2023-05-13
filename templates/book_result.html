@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Result</title>
+    <style>table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}</style>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+        <form method="post">
+            <table>
+                <tr>
+                    <th>order_id</th>
+                </tr>
+                {% for item in book_list %}
+                    <tr>
+                        <td>{{ item.order_id }}</td>
+                {% endfor %}
+            </table>
+        </form>
+    {% endblock content %}
+
+</body>
+</html>
